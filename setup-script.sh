@@ -35,6 +35,13 @@ $PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 brew install caskroom/cask/brew-cask
 
 apps=(
+  atom
   dropbox
   google-chrome
+  skype
 )
+
+# Install apps to /Applications
+# Default is: /Users/$user/Applications
+echo "installing apps..."
+brew cask install --appdir="/Applications" ${apps[@]}
